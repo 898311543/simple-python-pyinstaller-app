@@ -6,7 +6,7 @@ pipeline {
                 windows_node
             }
             steps {
-                python -m py_compile sources/add2vals.py
+                sh 'python -m py_compile sources/add2vals.py'
             }
         }
     }
