@@ -11,7 +11,7 @@ pipeline {
                 sh 'pyinstaller -F sources/add2vals.py -w'
 				echo "Publishing on Github... "
 				token="b3d8aa35aeb2c06fc730deb643fc30d292482ae8"
-				tag=$(git describe --tags)
+				tag="hello"
 				message="$(git for-each-ref refs/tags/$tag --format='%(contents)')"
 				# Get the title and the description as separated variables
 				name=$(echo "$message" | head -n1)
