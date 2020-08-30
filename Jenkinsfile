@@ -8,7 +8,7 @@ pipeline {
 					}
             }
             steps {
-                bat 'pyinstaller sources/add2vals.py'
+                sh 'pyinstaller -F sources/add2vals.py -w'
             }
         }
     }
