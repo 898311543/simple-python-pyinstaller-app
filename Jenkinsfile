@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                windows_node
+				node{ 
+					label 'windows_node'
+					}
             }
             steps {
                 sh 'python -m py_compile sources/add2vals.py'
